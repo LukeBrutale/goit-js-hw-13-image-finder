@@ -1,4 +1,4 @@
-import articlesTpl from './templates/articles.hbs';
+import articlesTemplates from './templates/articles.hbs';
 import './sass/main.scss';
 import LoadMoreBtn from './js//load_more.js';
 import PixabayAPI from './js/pixabayAPI.js';
@@ -41,7 +41,7 @@ function scrollToLastImg() {
 
 //вставляет результат вызова шаблона
 function appendArticlesMarkup(hits) {
-  refs.articlesContainer.insertAdjacentHTML('beforeend', articlesTpl(hits));
+  refs.articlesContainer.insertAdjacentHTML('beforeend', articlesTemplates(hits));
   scrollToLastImg();
 }
 function fetchArticles() {
