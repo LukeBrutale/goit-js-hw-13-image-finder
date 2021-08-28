@@ -21,6 +21,7 @@ loadMoreBtn.refs.button.addEventListener('click', fetchArticles);
 
 function onSearch(event) {
   event.preventDefault();
+  
   pixabayAPI.query = event.currentTarget.elements.query.value;
   if (PixabayAPI.query === '') {
     return alert('input error');
